@@ -85,8 +85,8 @@ def UserRegistrationSubmit(request):
         return render(request, "UserRegistration.html", {'msg': 'Fail To Submit Record'})
 
 
-def UserSignPage(request):
-    return render(request, "UserSignPage.html", {'msg': ''})
+def index(request):
+    return render(request, "index.html", {'msg': ''})
 
 
 def EmailSignPage(request):

@@ -44,7 +44,7 @@ urlpatterns = [
     path('userregistration/', UserRegistration.UserRegistrationInterface),
     path('loginpage/', UserRegistration.UserLogin),
     path('otppage', UserRegistration.OtpPage),
-    path('usersignpage/', UserRegistration.UserSignPage),
+    path('index/', UserRegistration.index),
     path('forgotpaswd/', UserRegistration.Forgotpaswd),
     path('doctordisplayall/', UserRegistration.DoctorDisplayAll),
     path('emailsignpage/', UserRegistration.EmailSignPage),

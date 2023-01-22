@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4019535e-1371-48db-910a-971dd70e066e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/template/PatientPriscription.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/PatientPriscription.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/medassist/UserRegistration.py" beforeDir="false" afterPath="$PROJECT_DIR$/medassist/UserRegistration.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/medassist/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/medassist/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/UserSignPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -264,6 +268,7 @@
       <workItem from="1670482661593" duration="955000" />
       <workItem from="1674219368309" duration="123000" />
       <workItem from="1674228655159" duration="62000" />
+      <workItem from="1674372051390" duration="671000" />
     </task>
     <servers />
   </component>
@@ -275,7 +280,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
