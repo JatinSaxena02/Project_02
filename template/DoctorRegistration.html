@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<style type="text/css" xmlns="http://www.w3.org/1999/html">
+    .root {
+        width: 100%;
+        height: 100vh;
+        background: #f5f6fa;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+    }
+
+    .subdiv {
+        width: 700px;
+        height: auto;
+        background: #7f8fa6;
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .head {
+        font-size: 32px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        color: #FFF;
+        display: flex;
+        align-items: center;
+    }
+</style>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Doctor Registration</title>
+    <!-- Font Awesome -->
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+            rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+            rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.css"
+            rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="/static/project.js"></script>
+</head>
+<body>
+<form action="/doctorregistrationsubmit" method="post" enctype="multipart/form-data">{% csrf_token %}
+    <div class="root">
+        <div class="subdiv">
+            <div class="head">
+                <span><img src="/static/icon.png" width="55"></span>
+                <span style="padding-left: 15px">Doctor Registration</span>
+            </div>
+            <div class="row" style="margin-top:8px;">
+                <div class="col-12">
+                    <div class="form-outline form-white">
+                        <input type="text" id="dname" name="dname" class="form-control form-control-lg"/>
+                        <label class="form-label" for="dname">Doctor's Name</label>
+                    </div>
+
+                </div>
+            </div>
+            <!--Gender radio-->
+
+            <div class="row" style="margin-top:8px;">
+                <div class="col-12">
+                    <div class="form-outline form-white">
+                        <div style="color: #ffff">Gender</div>
+                        <div class="btn-group">
+                            <input type="radio" value="Male" class="btn-check" name="gender" id="gen" autocomplete="off"
+                                   checked/>
+                            <label class="btn btn-white" for="gen">Male</label>
+
+                            <input type="radio" value="Female" class="btn-check" name="gender" id="gen1"
+                                   autocomplete="off"/>
+                            <label class="btn btn-white" for="gen1">Female</label>
+
+                            <input type="radio" value="Other" class="btn-check" name="gender" id="gen2"
+                                   autocomplete="off"/>
+                            <label class="btn btn-white" for="gen2">Other</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--Dob-->
+            <div class="row" style="margin-top:10px;">
+                <div class="col-12">
+                    <div class="form-outline form-white">
+                        <input type="date" id="dob" name="dob" class="form-control form-control-lg"/>
+                        <label class="form-label" for="dob">Date Of Birth</label>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="row" style="margin-top:10px;">
+                <div class="col-12">
+                    <div class="form-outline form-white">
+                        <input type="number" id="mobnum" name="mobnum" class="form-control form-control-lg"/>
+                        <label class="form-label" for="mobnum">Mobile Number</label>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row" style="margin-top:10px;">
+                <div class="col-12">
+                    <div class="form-outline form-white">
+                        <input type="text" id="email" name="email" class="form-control form-control-lg"/>
+                        <label class="form-label" for="email">Email Address</label>
+                    </div>
+
+                </div>
+            </div>
+            <!-- Specialization input -->
+            <div class="row" style="margin-top:10px;">
+                <div class="col-12">
+                    <div class="form-outline form-white">
+                        <select id="special" name="special" class="form-select">
+                            <option>-Specialization-</option>
+                        </select>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row" style="margin-top: 10px">
+                <div class="col-12">
+                    <input name="icon" class="form-control form-white form-control-lg" id="formFileLg"
+                           type="file"/>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 10px">
+                <div class="col-6">
+                    <button type="submit" style="width: 100%" class="btn btn-light btn-lg">Save</button>
+                </div>
+                <div class="col-6">
+                    <button type="reset" style="width: 100%" class="btn btn-light btn-lg">Reset</button>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 10px">
+                <div style="color: #FFF; font-size: 24px" class="col-12">
+                    {{ msg }}
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+</body>
+<!-- MDB -->
+<script
+        type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.js"
+></script>
+</html>

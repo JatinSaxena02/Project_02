@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <!-- jQuery -->
+    <script type="text/javascript"
+            src=
+                    "https://code.jquery.com/jquery-2.1.1.min.js">
+    </script>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet"
+          href=
+                  "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
+    <script type="text/javascript"
+            src=
+                    "https://code.jquery.com/jquery-2.1.1.min.js">
+    </script>
+    <script src=
+                    "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo&family=Orelega+One&display=swap" rel="stylesheet">
+
+
+    <!--  <script src="/static/project5.js">
+
+      </script>-->
+
+</head>
+<body>
+
+<div style="background-color: #c3edf9;height: 100vh;display: flex;justify-content:center; align-items:center;"
+     class="root">
+    <div style="background-color: #ffff;height: 100vh;width: 80%;border-radius: 10px 10px">
+        <div style="display: flex;width: 100%;background-color: #48dbfb;color: white;height: 10vh;border-radius: 10px 10px;text-align: center;justify-content: center;align-items: center;font-size: 25px;font-family: Georgia"
+             class="col s12">
+            Hello <h6 style="color: darkblue;font-size: 25px"> Dr.{{ docname }}</h6>, here are some patients waiting for
+            you
+            <div style="display: flex;padding-left: 400px">
+                <a style="border-radius: 12px" class="btn waves-effect blue accent-3 waves-light btn-primary" href="/doctorlogout">
+                    Logout
+                </a>
+            </div>
+        </div>
+        <div style="margin:15px;margin-left: 50px;width: 85%" class="row">
+            <table>
+                <thead style="font-size:25px; font-family: Georgia;color:#48dbfb" class="head">
+                <tr>
+                    <th style="padding-left: 20px;">Name</th>
+                    <th>Mobile</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for row in data %}
+                    <tr>
+                        <td> {{ row.username }}</td>
+                        <td>{{ row.mobileno }}</td>
+                        <td>{{ row.currentdate }}</td>
+                        <td>{{ row.currenttime }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+</div>
+    </div>
+
+<!--JavaScript at end of body for optimized loading-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js">
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<script type="text/javascript"
+        src=
+                "https://code.jquery.com/jquery-2.1.1.min.js">
+</script>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Doctor Login Dashboard</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+<body>
+<div style="background-color: deepskyblue;height: 100vh">
+    <div class="row"
+         style="height: 10vh;width: 80%;background-color: #c3edf9;display: flex;justify-content: center;align-items: center;align-content: center;color: #3742fa;font-family: Georgia;font-size: 19px">
+        <img src="/static/{{ row.icon }}">
+        Dr {{ row.doctorname }}
+    </div>
+    <div class="row">
+        <div style="padding-left: 230px">
+            <div style="background-color: #c3edf9;width: 80%;height: auto;font-size: 20px;font-family: Roboto;color: dodgerblue;">
+                <div style="text-align: center">Patient Report</div>
+                <table style="margin-top: 30px">
+
+                    <tr>
+                        <td style="padding-left: 50px">Patient Name :</td>
+                        <td>Doctor Id :</td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left: 50px">Registration Date :</td>
+                        <td>Specialization</td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left: 50px">Registration Time :</td>
+                    </tr>
+                </table>
+                <div style="text-align: center"> Your Question</div>
+                <div class="questiondiv1"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+
+<script src=
+                "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js">
+
+</script>
+</body>
+</html>

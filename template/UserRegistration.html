@@ -1,0 +1,161 @@
+<html>
+<head>
+    <title>
+        Form
+    </title>
+    <meta name="viewport"
+          content=
+                  "width=device-width, initial-scale=1.0"/>
+    <link href=
+                  "https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet"/>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet"
+          href=
+                  "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
+    <script type="text/javascript"
+            src=
+                    "https://code.jquery.com/jquery-2.1.1.min.js">
+    </script>
+    <script src=
+                    "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <style type="text/css">
+        .maincontainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f5f6fa;
+
+        }
+
+        .root {
+            width: 500px;
+            background: #fff;
+            padding: 10px;
+            margin: 50px;
+
+        }
+
+        .heading {
+            color: black;
+            font-size: 32px;
+            align-items: center;
+            font-weight: bold;
+            display: flex;
+            padding: 5px;
+        }
+
+        .rowgap {
+            margin-top: 40px;
+        }
+
+    </style>
+
+    <script>
+        $(document).ready(function () {
+            $("select").material_select();
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('.timepicker').timepicker();
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('.datepicker').datepicker();
+        });
+    </script>
+</head>
+<body>
+<form action="/userregistrationsubmit" method="post" enctype="multipart/form-data">{% csrf_token %}
+    <div class="maincontainer">
+        <div class="root">
+            <div class="heading">Create Account</div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">person</i>
+                    <input id="username" name="username" type="text" class="validate">
+                    <label for="username">Enter Your Name</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">location_city</i>
+                    <select id="usercity" name="usercity">
+                        <option value="" disabled selected>Choose Your City</option>
+                        <option value="1">Pune</option>
+                        <option value="2">Noida</option>
+                        <option value="3">Gwalior</option>
+                    </select>
+                    <label>City</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">email</i>
+                    <input id="useremail" name="useremail" type="email" class="validate">
+                    <label for="useremail">Email Address</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">date_range</i>
+                    <input id="userdob" name="userdob" type="text" class="datepicker">
+                    <label for="userdob">Date Of Birth</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">schedule</i>
+                    <input id="tor" name="tor" type="text" class="timepicker">
+                    <label for="tor">Time Of Registration</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">phone</i>
+                    <input id="usernum" name="usernum" type="text" class="validate">
+                    <label for="usernum">Mobile Number</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">lock</i>
+                    <input id="userpassword" name="userpassword" type="password" class="validate">
+                    <label for="userpassword">Enter Your password</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <button style="border-radius: 16px;width: 100%" class="btn waves-effect blue accent-3 waves-light"
+                            type="submit">
+                        Submit
+                    </button>
+                </div>
+            </div>
+            <div class="row">
+                <div style="color: black; font-size: 24px" class="col-12">
+                    {{ msg }}
+                </div>
+            </div>
+
+            <div class="row">
+                <div style="color: black;font-family: Roboto;font-size: 17px;text-align: center" class="col-12">
+                    Already have an account?
+                </div>
+                <div style="color: black;font-size: 14px;text-align: center" class="col-12">
+                    <a href="/loginpage">Sign In</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--JavaScript at end of body for optimized loading-->
+    <script src=
+                    "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js">
+    </script>
+</form>
+</body>
+</html>

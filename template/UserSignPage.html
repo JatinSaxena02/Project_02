@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<style type="text/css">
+    .root {
+        width: 100%;
+        height: 100vh;
+        background: #f5f6fa;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+    }
+
+    .subdiv {
+        width: 420px;
+        height: 700px;
+        background: #FFFF;
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .head {
+        color: black;
+        padding: 5px;
+    }
+</style>
+<html lang="en">
+<head>
+    <title>
+        Sign Method Page
+    </title>
+    <meta name="viewport"
+          content=
+                  "width=device-width, initial-scale=1.0"/>
+    <link href=
+                  "https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet"/>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet"
+          href=
+                  "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
+    <script type="text/javascript"
+            src=
+                    "https://code.jquery.com/jquery-2.1.1.min.js">
+    </script>
+    <script src=
+                    "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+<body>
+    <div class="root">
+        <div class="subdiv">
+            <div class="head">
+                <span><center><img src="/static/doctortrans.png" style="width: 260px"></center></span>
+                <h4 style="font-weight: bold;font-size: 24px;margin-top: 35px">Let your Doctor know about your your
+                    status before seem them.</h4>
+            </div>
+
+            <div class="row" style="margin-top: 28px">
+                <div class="col-12">
+                    <button type="button"
+                            style="border-radius: 18px; width: 100%;background-color: #48dbfb;"
+                            class="btnloginotp waves-effect waves-light btn" name="action">Login with Mobile Number
+                    </button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <button type="button" name="action" style="border-radius: 18px; width: 100%;background-color: #48dbfb;"
+                            class="btnloginpass waves-effect waves-light btn">Login with Email Address
+                    </button>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 100px">
+                <div class="col-12" align="center">
+                    <span>Don't have an account?</span>
+                    <button type="button" name="action"
+                            style="border-radius: 18px; width: 100%;background-color:#3742fa;"
+                            class="btnaccount waves-effect waves-light btn">Create new account
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--JavaScript at end of body for optimized loading-->
+<script src=
+                "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js">
+</script>
+
+<script>
+    $('.btnloginotp').click(function(){
+        location.href="http://localhost:8000/loginpage"
+    })
+
+    $('.btnaccount').click(function(){
+        location.href="http://localhost:8000/userregistration"
+    })
+
+    $('.btnloginpass').click(function(){
+        location.href="http://localhost:8000/emailsignpage"
+    })
+</script>
+</body>
+</html>

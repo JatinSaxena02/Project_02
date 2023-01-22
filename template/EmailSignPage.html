@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<style type="text/css" xmlns="http://www.w3.org/1999/html">
+    .root {
+        width: 100%;
+        height: 100vh;
+        background: #f5f6fa;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+    }
+
+    .subdiv {
+        width: 500px;
+        height: 700px;
+        background: #FFFF;
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .head {
+        color: black;
+        align-items: center;
+        padding: 5px;
+        margin-top: 70px;
+    }
+</style>
+<html lang="en">
+<head>
+    <title>
+        Form
+    </title>
+    <meta name="viewport"
+          content=
+                  "width=device-width, initial-scale=1.0"/>
+    <link href=
+                  "https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet"/>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet"
+          href=
+                  "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
+    <script type="text/javascript"
+            src=
+                    "https://code.jquery.com/jquery-2.1.1.min.js">
+    </script>
+    <script src=
+                    "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+<body>
+<form action="/checkemailsignpage" method="post">{% csrf_token %}
+    <div class="root">
+        <div class="subdiv">
+            <div class="head">
+                <h3 style="font-weight: bold">Sign In</h3>
+                <span>Enter yor email address to Sign In</span>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">email</i>
+                    <input id="useremail" name="useremail" type="email" class="validate" required>
+                    <label for="useremail">Email Address</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">lock</i>
+                    <input id="userpassword" name="userpassword" type="password" class="validate" required>
+                    <label for="userpassword">Enter Your password</label>
+                </div>
+            </div>
+
+             <div class="row" style="margin-bottom: 10px">
+                <div class="col-12">
+                    <div>{{ msg }}</div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-12">
+                    <button type="submit" name="action"
+                            style="border-radius: 18px; width: 100%;background-color: #48dbfb;"
+                            class="btnlogin waves-effect waves-light btn">Login
+                    </button>
+                     <div style="color: black;font-size: 14px;text-align: center;margin-top: 2px" class="col-12">
+                        <a href="/forgotpaswd">Forgot Password</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 120px">
+                <div class="col-12" align="center">
+                    <span>Don't have an account?</span>
+                    <button type="button" name="action"
+                            style="border-radius: 18px; width: 100%;background-color:#3742fa;"
+                            class="btnaccount waves-effect waves-light btn">Create new account
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+</body>
+<!--JavaScript at end of body for optimized loading-->
+<script src=
+                "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js">
+</script>
+<script>
+    $('.btnaccount').click(function () {
+        location.href = "http://localhost:8000/userregistration"
+    })
+     $('.btnforgotpaswrd').click(function () {
+        location.href = "http://localhost:8000/forgotpaswd"
+    })
+</script>
+</html>
